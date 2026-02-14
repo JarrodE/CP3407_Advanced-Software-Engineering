@@ -105,3 +105,7 @@ Planned baseline for Milestone 1.0:
 ## How to run (fill in once scaffold exists)
 TBD
 
+## Backlog
+- [Initial Backlog Ideas](docs/initial-backlog.md)
+
+

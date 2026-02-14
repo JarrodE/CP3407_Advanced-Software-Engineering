@@ -16,7 +16,7 @@ Priority scale: 10 = most important, then 20/30/40/50. :contentReference[oaicite
    - As a customer, I want to change quantities or remove items so my cart matches what I want.
 
 5. **(20) Place an order**
-   - As a customer, I want to place an order so the restaurant receives my request.
+   - As a customer, I want to place an order with delivery details so the restaurant can fulfil my request.
 
 6. **(30) Track order status**
    - As a customer, I want to see my order status so I know what’s happening.

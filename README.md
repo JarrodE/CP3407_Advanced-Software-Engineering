@@ -64,4 +64,44 @@ Total: YY days
 1. [Iteration-1](./iteration_1.md)
 2. [Iteration-2](./iteration_2.md)
 
+# FeedMe (CP3407 Project)
+
+## Overview
+FeedMe is a food ordering and delivery web app (a “better FoodPanda” style system). It allows customers to browse restaurants, place orders, and track delivery, while restaurants manage menus and orders.
+
+
+
+
+
+
+
+## Team
+- Jarrod 
+
+## Goals (Chapter 1 applied)
+I will work iteratively: each iteration produces working, runnable software and incorporates feedback. The focus is delivering what’s needed, on time, and on budget. :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3}
+
+## Tech Stack (proposed)
+- Frontend: React (or similar)
+- Backend: Node/Express (or similar)
+- Database: PostgreSQL (or similar)
+- CI: GitHub Actions
+- Deployment: (optional for higher marks) AWS
+
+## Repo Structure
+- /docs — project documentation (backlog, plan, etc.)
+- /app or /src — application source code (depends on template)
+
+## Documentation
+- Initial Backlog Ideas: docs/initial-backlog.md
+
+## Milestone 1.0 (baseline functionality)
+Baseline functionality = the smallest set of features needed for the software to be useful. :contentReference[oaicite:4]{index=4}
+Planned baseline for Milestone 1.0:
+- Customer can browse restaurants/menus, add to cart, and place an order
+- Restaurant can manage menu + receive orders
+- Basic order status tracking
+
+## How to run (fill in once scaffold exists)
+TBD
 

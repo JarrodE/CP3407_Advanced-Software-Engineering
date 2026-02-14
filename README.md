@@ -64,16 +64,16 @@ Total: YY days
 1. [Iteration-1](./iteration_1.md)
 2. [Iteration-2](./iteration_2.md)
 
+
+
+
+
+
+
 # FeedMe (CP3407 Project)
 
 ## Overview
 FeedMe is a food ordering and delivery web app (a “better FoodPanda” style system). It allows customers to browse restaurants, place orders, and track delivery, while restaurants manage menus and orders.
-
-
-
-
-
-
 
 ## Team
 - Jarrod 
@@ -93,7 +93,10 @@ I will work iteratively: each iteration produces working, runnable software and 
 - /app or /src — application source code (depends on template)
 
 ## Documentation
-- Initial Backlog Ideas: docs/initial-backlog.md
+- [Initial Backlog Ideas](docs/initial-backlog.md)
+- [User Stories (table)](User_stories.md)
+- [Iteration 1 Board](iteration_1.md)
+- [Iteration 2 Board](iteration_2.md)
 
 ## Milestone 1.0 (baseline functionality)
 Baseline functionality = the smallest set of features needed for the software to be useful. :contentReference[oaicite:4]{index=4}
@@ -101,6 +104,8 @@ Planned baseline for Milestone 1.0:
 - Customer can browse restaurants/menus, add to cart, and place an order
 - Restaurant can manage menu + receive orders
 - Basic order status tracking
+
+Delivery workflow (driver accepts jobs) is a later milestone.
 
 ## How to run (fill in once scaffold exists)
 TBD

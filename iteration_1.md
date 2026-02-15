@@ -23,6 +23,8 @@ User stories or tasks:
 
 In progress:
 * US-01 Browse restaurants (J), 2026-02-15
+* US-02 View restaurant menu (J), 2026-02-15
+
 
 Completed:
 * (none yet)

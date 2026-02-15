@@ -27,4 +27,4 @@ Description-v1: The app will show a list of restaurants so the customer can choo
 - Date: 2026-02-15
 - Evidence:
   - Restaurant list prototype running (Live Server)
-  - Screenshot: ![US-01 Restaurant list](docs/screenshots/us01_restaurant_list.png)
+  - Screenshot: ![US-01 Restaurant list](docs\screenshots\us01_restaurant_list.png)

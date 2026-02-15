@@ -1,0 +1,17 @@
+{
+  "r1": [
+    { "id": "m1", "name": "Salmon Nigiri (6pc)", "price": 14.5 },
+    { "id": "m2", "name": "Chicken Katsu Roll", "price": 12.0 },
+    { "id": "m3", "name": "Miso Soup", "price": 4.0 }
+  ],
+  "r2": [
+    { "id": "m4", "name": "Spaghetti Carbonara", "price": 18.0 },
+    { "id": "m5", "name": "Margherita Pizza", "price": 16.0 },
+    { "id": "m6", "name": "Garlic Bread", "price": 6.5 }
+  ],
+  "r3": [
+    { "id": "m7", "name": "Butter Chicken", "price": 19.0 },
+    { "id": "m8", "name": "Chicken Biryani", "price": 18.5 },
+    { "id": "m9", "name": "Plain Naan", "price": 4.5 }
+  ]
+}

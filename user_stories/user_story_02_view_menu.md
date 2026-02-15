@@ -23,5 +23,8 @@ Description-v1: The app will show a restaurant’s menu so the customer can deci
 # UI Design
 - Add a screenshot/mockup here (later).
 
-# Completed
-- Add screenshot(s) of working menu page here (later).
+## Completed-v1 (Iteration 1)
+- Date: 2026-02-15
+- Evidence:
+  - Screenshot: ![US-02 Menu page](../docs/screenshots/us02_menu_page.png)
+

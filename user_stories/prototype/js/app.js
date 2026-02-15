@@ -13,9 +13,11 @@ function render(items) {
   }
   statusEl.textContent = `Showing ${items.length} restaurant(s).`;
 
-  for (const r of items) {
+    for (const r of items) {
     const card = document.createElement("div");
     card.className = "card";
+    card.style.cursor = "pointer";
+
     card.innerHTML = `
       <h3>${r.name}</h3>
       <div class="meta">
@@ -23,7 +25,14 @@ function render(items) {
         <span class="badge">⭐ ${r.rating.toFixed(1)}</span>
         <span class="badge">⏱️ ${r.etaMins} min</span>
       </div>
+      <div class="status" style="margin-top:10px;">Click to view menu →</div>
     `;
+
+    card.addEventListener("click", () => {
+      const url = `./menu.html?rid=${encodeURIComponent(r.id)}&name=${encodeURIComponent(r.name)}`;
+      window.location.href = url;
+    });
+
     listEl.appendChild(card);
   }
 }

@@ -1,0 +1,5 @@
+[
+  { "id": "r1", "name": "Sushi Hub", "category": "Japanese", "etaMins": 30, "rating": 4.6 },
+  { "id": "r2", "name": "Pasta Palace", "category": "Italian", "etaMins": 40, "rating": 4.4 },
+  { "id": "r3", "name": "Curry Corner", "category": "Indian", "etaMins": 35, "rating": 4.7 }
+]

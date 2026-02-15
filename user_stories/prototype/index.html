@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FeedMe Prototype - Restaurants</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>FeedMe</h1>
+    <p class="sub">Prototype: Browse restaurants (US-01)</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="search" type="text" placeholder="Search restaurants..." />
+      <select id="category">
+        <option value="">All categories</option>
+      </select>
+    </section>
+
+    <section>
+      <h2>Restaurants</h2>
+      <div id="status" class="status">Loading...</div>
+      <div id="list" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>CP3407 - Iteration 1</small>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

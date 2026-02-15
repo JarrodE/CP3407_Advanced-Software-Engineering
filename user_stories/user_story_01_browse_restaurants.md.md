@@ -16,12 +16,15 @@ Planning poker / estimates:
 Description-v1: The app will show a list of restaurants so the customer can choose where to order from.
 
 ## Tasks (see chapter 4)
-1. Create restaurant list page/screen (0.5 days)
-2. Provide basic data source (seed/mock JSON or simple API stub) (0.25 days)
-3. Add basic navigation to restaurant list from home (0.25 days)
+- [x] Create restaurant list page/screen (0.5 days)
+- [x] Provide basic data source (seed/mock JSON) (0.25 days)
+- [x] Add search + category filter (0.25 days)
 
 # UI Design
 - Add a screenshot/mockup here (later).
 
-# Completed
-- Add screenshot(s) of working restaurant list here (later).
+## Completed-v1 (Iteration 1)
+- Date: 2026-02-15
+- Evidence:
+  - Restaurant list prototype running (Live Server)
+  - Screenshot: ![US-01 Restaurant list](docs/screenshots/us01_restaurant_list.png)

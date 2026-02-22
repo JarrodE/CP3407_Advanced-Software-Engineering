@@ -20,3 +20,14 @@ body { margin: 0; background: #0f1115; color: #e8e8e8; }
 .meta { display: flex; gap: 10px; flex-wrap: wrap; color: #b6b6b6; font-size: 0.9rem; }
 .badge { padding: 4px 10px; border-radius: 999px; border: 1px solid #2a2e3a; }
 .footer { padding: 16px; text-align: center; color: #777; border-top: 1px solid #222; }
+
+/* US-03 T1 button styling */
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #2a2e3a;
+  background: #151a26;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+.btn:hover { filter: brightness(1.1); }

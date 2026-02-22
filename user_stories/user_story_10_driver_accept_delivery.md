@@ -16,9 +16,9 @@ Planning poker / estimates:
 Description-v1: The driver can accept an available delivery so they can deliver an order.
 
 ## Tasks (see chapter 4)
-1. Create “Available deliveries” list page (0.5 days)
-2. Add “Accept job” action that assigns driver to delivery (0.25 days)
-3. Persist assignment and show accepted job state (0.25 days)
+- [ ] [todo] Create “Available deliveries” list page (0.50 days)
+- [ ] [todo] Add “Accept job” action that assigns driver (0.25 days)
+- [ ] [todo] Persist assignment + show accepted state (0.25 days)
 
 # UI Design
 - Add driver list mockup here (later).

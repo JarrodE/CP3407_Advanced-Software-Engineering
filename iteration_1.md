@@ -11,6 +11,9 @@ Checklist:
 * Number of developers: 1
 * Total estimated amount of work: 10 days
 
+## Task tracking (Practical 4)
+- Task board: [docs/iteration_1_tasks.md](./docs/iteration_1_tasks.md)
+
 User stories or tasks:
 1. [Browse restaurants](./user_stories/user_story_01_browse_restaurants.md), priority 10, 1 day
 2. [View restaurant menu](./user_stories/user_story_02_view_menu.md), priority 10, 1 day

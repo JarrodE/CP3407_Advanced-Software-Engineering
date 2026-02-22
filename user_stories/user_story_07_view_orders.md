@@ -16,9 +16,9 @@ Planning poker / estimates:
 Description-v1: The restaurant can see new incoming orders so they can start preparing them.
 
 ## Tasks (see chapter 4)
-1. Create restaurant orders list page (0.5 days)
-2. Load orders from storage and display key details (0.4 days)
-3. Add basic order detail view (0.1 days)
+- [ ] [todo] Create restaurant orders list page (0.50 days)
+- [ ] [todo] Load orders from storage and show key details (0.40 days)
+- [ ] [todo] Add basic order detail view (0.10 days)
 
 # UI Design
 - Add orders list mockup here (later).

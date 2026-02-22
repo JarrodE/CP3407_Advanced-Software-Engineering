@@ -16,9 +16,9 @@ Planning poker / estimates:
 Description-v1: The customer can change quantities or remove items so the cart matches what they want.
 
 ## Tasks (see chapter 4)
-1. Add quantity controls (+ / -) in cart view (0.4 days)
-2. Add remove item action (0.2 days)
-3. Recalculate totals and validate cart state updates (0.4 days)
+- [ ] [todo] Add quantity controls (+ / -) in cart view (0.40 days)
+- [ ] [todo] Add remove item action (0.20 days)
+- [ ] [todo] Recalculate totals and validate cart updates (0.40 days)
 
 # UI Design
 - Add a screenshot/mockup here (later).

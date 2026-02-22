@@ -16,11 +16,11 @@ Planning poker / estimates:
 Description-v1: The app will show a restaurant’s menu so the customer can decide what to buy.
 
 ## Tasks (see chapter 4)
-1. Create menu page/screen for a selected restaurant (0.5 days)
-2. Load menu items for the selected restaurant (0.25 days)
-3. Add navigation from restaurant list → menu (0.25 days)
+- [x] [done] Create menu page/screen for a selected restaurant (0.50 days)
+- [x] [done] Load menu items for the selected restaurant (0.25 days)
+- [x] [done] Add navigation from restaurant list → menu (0.25 days)
 
-# UI Design
+# UI Design# UI Design
 - Add a screenshot/mockup here (later).
 
 ## Completed-v1 (Iteration 1)

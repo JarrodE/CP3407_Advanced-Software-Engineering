@@ -16,9 +16,9 @@ Planning poker / estimates:
 Description-v1: The restaurant updates order status so customers know the progress.
 
 ## Tasks (see chapter 4)
-1. Add status field to order model (0.25 days)
-2. Add UI control to update status in restaurant order view (0.5 days)
-3. Persist updated status and verify in order list (0.25 days)
+- [ ] [todo] Add status field to order model (0.25 days)
+- [ ] [todo] Add UI control to update status in restaurant view (0.50 days)
+- [ ] [todo] Persist updated status and verify in orders list (0.25 days)
 
 # UI Design
 - Add status control mockup here (later).

@@ -17,10 +17,10 @@ Planning poker / estimates:
 Description-v1: The customer can place an order with delivery details so the restaurant receives the request.
 
 ## Tasks (see chapter 4)
-1. Create checkout form for delivery details (0.5 days)
-2. Validate checkout input (0.25 days)
-3. Create order model and persist order (DB or stub) (0.75 days)
-4. Confirm order placed (confirmation screen + basic order id) (0.5 days)
+- [ ] [todo] Create checkout form for delivery details (0.50 days)
+- [ ] [todo] Validate checkout input (0.25 days)
+- [ ] [todo] Persist order (DB/stub) (0.75 days)
+- [ ] [todo] Show confirmation screen with order id (0.50 days)
 
 # UI Design
 - Add a checkout screen mockup here (later).

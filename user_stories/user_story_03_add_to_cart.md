@@ -16,9 +16,10 @@ Planning poker / estimates:
 Description-v1: The customer can add menu items to a cart so they can prepare an order.
 
 ## Tasks (see chapter 4)
-1. Add “Add to cart” action on menu items (0.4 days)
-2. Implement cart state (in-memory or local storage) (0.4 days)
-3. Create a simple cart view showing items and totals (0.2 days)
+- [ ] [todo] Add “Add to cart” button on menu items (0.25 days)
+- [ ] [todo] Implement cart storage in localStorage (0.25 days)
+- [ ] [todo] Create cart page showing items + total (0.40 days)
+- [ ] [todo] Add clear cart button + basic UX messages (0.10 days)
 
 # UI Design
 - Add a screenshot/mockup here (later).

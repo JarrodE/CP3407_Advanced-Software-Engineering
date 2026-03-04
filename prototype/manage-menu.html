@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FeedMe Prototype - Manage Menu</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>FeedMe</h1>
+    <p class="sub">Restaurant Portal: Manage Menu (US-06)</p>
+  </header>
+
+  <main class="container">
+    <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-bottom:16px;">
+      <a href="./restaurant-orders.html">View Orders →</a>
+      <span style="color:#555;">|</span>
+      <a href="./index.html">Customer view</a>
+    </div>
+
+    <!-- Restaurant selector -->
+    <div class="form-group" style="max-width:320px;">
+      <label for="restaurantSelect">Managing restaurant</label>
+      <select id="restaurantSelect" style="padding:10px; border-radius:10px; border:1px solid #2a2e3a; background:#151a26; color:#e8e8e8;">
+        <option value="">-- select --</option>
+      </select>
+    </div>
+
+    <section id="menuSection" style="display:none;">
+      <h2 id="menuHeading">Menu items</h2>
+      <div id="menuList" style="margin-bottom:20px;"></div>
+
+      <!-- Add new item form -->
+      <div class="card" style="max-width:420px;">
+        <h3 style="margin:0 0 14px;">Add new item</h3>
+        <form id="addForm" novalidate>
+          <div class="form-group">
+            <label for="newName">Item name</label>
+            <input id="newName" type="text" placeholder="e.g. Spring Rolls" />
+            <span class="field-error" id="errNewName"></span>
+          </div>
+          <div class="form-group">
+            <label for="newPrice">Price ($)</label>
+            <input id="newPrice" type="number" min="0" step="0.01" placeholder="0.00" />
+            <span class="field-error" id="errNewPrice"></span>
+          </div>
+          <div class="form-group" style="flex-direction:row; align-items:center; gap:10px;">
+            <input id="newAvail" type="checkbox" checked style="width:18px;height:18px;" />
+            <label for="newAvail" style="color:#e8e8e8; font-size:1rem;">Available</label>
+          </div>
+          <button class="btn btn-primary" type="submit">Add item</button>
+        </form>
+      </div>
+    </section>
+
+    <p id="portalStatus" class="status">Select a restaurant to manage its menu.</p>
+  </main>
+
+  <!-- Inline edit modal (simple overlay card) -->
+  <div id="editOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:100; align-items:center; justify-content:center;">
+    <div class="card" style="width:100%; max-width:400px; margin:20px;">
+      <h3 style="margin:0 0 14px;">Edit item</h3>
+      <form id="editForm" novalidate>
+        <input type="hidden" id="editId" />
+        <div class="form-group">
+          <label for="editName">Item name</label>
+          <input id="editName" type="text" />
+          <span class="field-error" id="errEditName"></span>
+        </div>
+        <div class="form-group">
+          <label for="editPrice">Price ($)</label>
+          <input id="editPrice" type="number" min="0" step="0.01" />
+          <span class="field-error" id="errEditPrice"></span>
+        </div>
+        <div class="form-group" style="flex-direction:row; align-items:center; gap:10px;">
+          <input id="editAvail" type="checkbox" style="width:18px;height:18px;" />
+          <label for="editAvail" style="color:#e8e8e8; font-size:1rem;">Available</label>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn btn-primary" type="submit">Save</button>
+          <button class="btn" type="button" id="cancelEdit">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <small>CP3407 - Iteration 1</small>
+  </footer>
+
+  <script src="./js/manage-menu.js"></script>
+</body>
+</html>

@@ -25,18 +25,22 @@ User stories or tasks:
 8. [Restaurant updates order status](./user_stories/user_story_08_update_order_status.md), priority 20, 1 day
 
 In progress:
-* US-03 T1 Add-to-cart button (J), 2026-02-22
-
+(none)
 
 Completed:
-* US-01 Browse restaurants (J),
-* US-02 View restaurant menu (J),
-* US-03 T1 Add-to-cart button (J), 2026-02-22
+* US-01 Browse restaurants (J)
+* US-02 View restaurant menu (J)
+* US-03 Add items to cart (J), 2026-03-04
+* US-04 Update cart quantities (J), 2026-03-04
+* US-05 Place an order (J), 2026-03-04
+* US-06 Restaurant manages menu (J), 2026-03-04
+* US-07 Restaurant views incoming orders (J), 2026-03-04
+* US-08 Restaurant updates order status (J), 2026-03-04
 
 ### Burn Down for iteration-1 (update at least once per week)
 * 4 weeks left, 10 days of estimated amount of work
-* 2 weeks left, __ days
-* 1 week left, __ days
+* 2 weeks left, 6 days
+* 1 week left, 4 days
 * 0 weeks left, 0 days
-* Actual Velocity: __
+* Actual Velocity: 10 days / 3 weeks ≈ 0.71 (all 8 stories complete)
 

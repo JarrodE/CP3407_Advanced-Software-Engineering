@@ -16,12 +16,16 @@ Planning poker / estimates:
 Description-v1: The restaurant can see new incoming orders so they can start preparing them.
 
 ## Tasks (see chapter 4)
-- [ ] [todo] Create restaurant orders list page (0.50 days)
-- [ ] [todo] Load orders from storage and show key details (0.40 days)
-- [ ] [todo] Add basic order detail view (0.10 days)
+- [x] [done] Create restaurant orders list page (0.50 days)
+- [x] [done] Load orders from storage and show key details (0.40 days)
+- [x] [done] Add basic order detail view (0.10 days) — inline within each order card
 
 # UI Design
 - Add orders list mockup here (later).
 
 # Completed
-- Add screenshot(s) of orders list here (later).
+## Completed-v1 (Iteration 1)
+- Date: 2026-03-04
+- Evidence:
+  - `prototype/restaurant-orders.html` — restaurant selector + orders list
+  - `prototype/js/restaurant-orders.js` — loads `feedme_orders`, filters by restaurantId, shows customer details + items inline

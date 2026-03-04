@@ -31,3 +31,18 @@ body { margin: 0; background: #0f1115; color: #e8e8e8; }
   cursor: pointer;
 }
 .btn:hover { filter: brightness(1.1); }
+.btn-danger { border-color: #6b2a2a; background: #2a1515; color: #e88; }
+.btn-danger:hover { filter: brightness(1.2); }
+.btn-primary { border-color: #2a4a6b; background: #152a3a; color: #7ec8e8; }
+.btn-primary:hover { filter: brightness(1.2); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; filter: none; }
+
+/* US-05 checkout form */
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-group label { font-size: 0.9rem; color: #b6b6b6; }
+.form-group input {
+  padding: 10px; border-radius: 10px; border: 1px solid #2a2e3a;
+  background: #151a26; color: #e8e8e8;
+}
+.form-group input:focus { outline: none; border-color: #4a6a8a; }
+.field-error { color: #e88; font-size: 0.85rem; min-height: 1.1em; }

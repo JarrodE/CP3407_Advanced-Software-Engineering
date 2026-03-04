@@ -16,13 +16,17 @@ Planning poker / estimates:
 Description-v1: The restaurant can create and edit menu items so customers can order accurate products.
 
 ## Tasks (see chapter 4)
-- [ ] [todo] Create restaurant management page (0.50 days)
-- [ ] [todo] Implement create menu item (0.50 days)
-- [ ] [todo] Implement edit/update menu item (0.50 days)
-- [ ] [todo] Persist menu items (DB/stub) (0.50 days)
+- [x] [done] Create restaurant management page (0.50 days)
+- [x] [done] Implement create menu item (0.50 days)
+- [x] [done] Implement edit/update menu item (0.50 days)
+- [x] [done] Persist menu items (DB/stub) (0.50 days) — saved to localStorage under `feedme_menus`
 
 # UI Design
 - Add a management screen mockup here (later).
 
 # Completed
-- Add screenshot(s) of create/edit menu item here (later).
+## Completed-v1 (Iteration 1)
+- Date: 2026-03-04
+- Evidence:
+  - `prototype/manage-menu.html` — restaurant selector, item list, add-item form, inline edit modal
+  - `prototype/js/manage-menu.js` — create/edit/delete items; custom menus persisted to `feedme_menus` in localStorage (falls back to seed menus.json)

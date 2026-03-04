@@ -32,6 +32,7 @@ Completed:
 * US-02 View restaurant menu (J)
 * US-03 Add items to cart (J), 2026-03-04
 * US-04 Update cart quantities (J), 2026-03-04
+* US-05 Place an order (J), 2026-03-04
 
 ### Burn Down for iteration-1 (update at least once per week)
 * 4 weeks left, 10 days of estimated amount of work

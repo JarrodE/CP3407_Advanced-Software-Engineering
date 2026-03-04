@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FeedMe Prototype - Checkout</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>FeedMe</h1>
+    <p class="sub">Prototype: Place an order (US-05)</p>
+  </header>
+
+  <main class="container">
+    <a href="./cart.html">← Back to cart</a>
+
+    <!-- Checkout form (shown first) -->
+    <section id="formSection" style="margin-top:14px;">
+      <h2>Delivery details</h2>
+      <div id="cartSummary" style="margin-bottom:20px;"></div>
+
+      <form id="checkoutForm" novalidate>
+        <div class="form-group">
+          <label for="custName">Name</label>
+          <input id="custName" type="text" placeholder="Your name" autocomplete="name" />
+          <span class="field-error" id="errName"></span>
+        </div>
+        <div class="form-group">
+          <label for="custAddress">Delivery address</label>
+          <input id="custAddress" type="text" placeholder="Street, suburb" autocomplete="street-address" />
+          <span class="field-error" id="errAddress"></span>
+        </div>
+        <div class="form-group">
+          <label for="custPhone">Phone</label>
+          <input id="custPhone" type="tel" placeholder="04xx xxx xxx" autocomplete="tel" />
+          <span class="field-error" id="errPhone"></span>
+        </div>
+        <div class="form-group">
+          <label>Payment</label>
+          <p class="meta" style="margin:6px 0 0;">Pay on delivery (cash)</p>
+        </div>
+        <div id="formError" class="field-error" style="margin-bottom:10px;"></div>
+        <button class="btn btn-primary" type="submit">Place order</button>
+      </form>
+    </section>
+
+    <!-- Confirmation screen (shown after submit) -->
+    <section id="confirmSection" style="display:none; margin-top:14px;">
+      <h2>Order confirmed!</h2>
+      <p id="confirmMsg" class="status"></p>
+      <div id="confirmDetails" style="margin-top:16px;"></div>
+      <div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn" href="./index.html">Back to restaurants</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>CP3407 - Iteration 1</small>
+  </footer>
+
+  <script src="./js/checkout.js"></script>
+</body>
+</html>

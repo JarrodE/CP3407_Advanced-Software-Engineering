@@ -7,13 +7,6 @@ Status labels used:
 
 ## Todo
 
-
-### US-05 Place an order
-- [ ] [todo] Create checkout form for delivery details (0.50 days)
-- [ ] [todo] Validate checkout input (0.25 days)
-- [ ] [todo] Persist order (DB/stub) (0.75 days)
-- [ ] [todo] Show confirmation screen with order id (0.50 days)
-
 ### US-06 Restaurant manages menu
 - [ ] [todo] Create restaurant management page (0.50 days)
 - [ ] [todo] Implement create menu item (0.50 days)
@@ -54,3 +47,9 @@ Status labels used:
 - [x] [done] Add quantity controls (+ / -) in cart view (0.40 days)
 - [x] [done] Add remove item action (0.20 days)
 - [x] [done] Recalculate totals and validate cart updates (0.40 days)
+
+### US-05 Place an order
+- [x] [done] Create checkout form for delivery details (0.50 days)
+- [x] [done] Validate checkout input (0.25 days)
+- [x] [done] Persist order (DB/stub) (0.75 days)
+- [x] [done] Show confirmation screen with order id (0.50 days)

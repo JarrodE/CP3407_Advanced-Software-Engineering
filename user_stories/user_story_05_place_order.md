@@ -17,13 +17,17 @@ Planning poker / estimates:
 Description-v1: The customer can place an order with delivery details so the restaurant receives the request.
 
 ## Tasks (see chapter 4)
-- [ ] [todo] Create checkout form for delivery details (0.50 days)
-- [ ] [todo] Validate checkout input (0.25 days)
-- [ ] [todo] Persist order (DB/stub) (0.75 days)
-- [ ] [todo] Show confirmation screen with order id (0.50 days)
+- [x] [done] Create checkout form for delivery details (0.50 days)
+- [x] [done] Validate checkout input (0.25 days)
+- [x] [done] Persist order (DB/stub) (0.75 days) — saved to localStorage under `feedme_orders`
+- [x] [done] Show confirmation screen with order id (0.50 days)
 
 # UI Design
 - Add a checkout screen mockup here (later).
 
 # Completed
-- Add screenshot(s) of confirmation screen here (later).
+## Completed-v1 (Iteration 1)
+- Date: 2026-03-04
+- Evidence:
+  - `prototype/checkout.html` — delivery form (name, address, phone) + confirmation section
+  - `prototype/js/checkout.js` — field validation, order persisted to `feedme_orders` in localStorage, cart cleared on submit, confirmation shown inline with order ID and status

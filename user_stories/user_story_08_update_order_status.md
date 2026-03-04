@@ -16,12 +16,15 @@ Planning poker / estimates:
 Description-v1: The restaurant updates order status so customers know the progress.
 
 ## Tasks (see chapter 4)
-- [ ] [todo] Add status field to order model (0.25 days)
-- [ ] [todo] Add UI control to update status in restaurant view (0.50 days)
-- [ ] [todo] Persist updated status and verify in orders list (0.25 days)
+- [x] [done] Add status field to order model (0.25 days) — status stored on order in `feedme_orders`
+- [x] [done] Add UI control to update status in restaurant view (0.50 days) — step buttons: pending → accepted → preparing → ready → completed
+- [x] [done] Persist updated status and verify in orders list (0.25 days) — re-renders inline after each update
 
 # UI Design
 - Add status control mockup here (later).
 
 # Completed
-- Add screenshot(s) of status changing here (later).
+## Completed-v1 (Iteration 1)
+- Date: 2026-03-04
+- Evidence:
+  - `prototype/js/restaurant-orders.js` — `updateOrderStatus()` updates and persists the order, re-renders the list; status colour-coded per state

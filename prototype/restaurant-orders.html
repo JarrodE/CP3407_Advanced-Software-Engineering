@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FeedMe Prototype - Restaurant Orders</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>FeedMe</h1>
+    <p class="sub">Restaurant Portal: Incoming Orders (US-07 / US-08)</p>
+  </header>
+
+  <main class="container">
+    <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-bottom:16px;">
+      <a href="./manage-menu.html">Manage Menu →</a>
+      <span style="color:#555;">|</span>
+      <a href="./index.html">Customer view</a>
+    </div>
+
+    <!-- Restaurant selector -->
+    <div class="form-group" style="max-width:320px;">
+      <label for="restaurantSelect">Viewing orders for</label>
+      <select id="restaurantSelect" style="padding:10px; border-radius:10px; border:1px solid #2a2e3a; background:#151a26; color:#e8e8e8;">
+        <option value="">-- select --</option>
+      </select>
+    </div>
+
+    <div id="portalStatus" class="status">Select a restaurant to see its orders.</div>
+    <div id="ordersList"></div>
+  </main>
+
+  <footer class="footer">
+    <small>CP3407 - Iteration 1</small>
+  </footer>
+
+  <script src="./js/restaurant-orders.js"></script>
+</body>
+</html>

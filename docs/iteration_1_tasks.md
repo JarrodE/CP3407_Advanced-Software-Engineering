@@ -6,25 +6,10 @@ Status labels used:
 - **done**
 
 ## Todo
-
-### US-06 Restaurant manages menu
-- [ ] [todo] Create restaurant management page (0.50 days)
-- [ ] [todo] Implement create menu item (0.50 days)
-- [ ] [todo] Implement edit/update menu item (0.50 days)
-- [ ] [todo] Persist menu items (DB/stub) (0.50 days)
-
-### US-07 Restaurant views incoming orders
-- [ ] [todo] Create restaurant orders list page (0.50 days)
-- [ ] [todo] Load orders from storage and show key details (0.40 days)
-- [ ] [todo] Add basic order detail view (0.10 days)
-
-### US-08 Restaurant updates order status
-- [ ] [todo] Add status field to order model (0.25 days)
-- [ ] [todo] Add UI control to update status in restaurant view (0.50 days)
-- [ ] [todo] Persist updated status and verify in orders list (0.25 days)
+(all iteration 1 stories complete)
 
 ## In Progress
-- (move tasks here when you start them)
+- (none)
 
 ## Done
 ### US-01 Browse restaurants
@@ -53,3 +38,19 @@ Status labels used:
 - [x] [done] Validate checkout input (0.25 days)
 - [x] [done] Persist order (DB/stub) (0.75 days)
 - [x] [done] Show confirmation screen with order id (0.50 days)
+
+### US-06 Restaurant manages menu
+- [x] [done] Create restaurant management page (0.50 days)
+- [x] [done] Implement create menu item (0.50 days)
+- [x] [done] Implement edit/update menu item (0.50 days)
+- [x] [done] Persist menu items (DB/stub) (0.50 days)
+
+### US-07 Restaurant views incoming orders
+- [x] [done] Create restaurant orders list page (0.50 days)
+- [x] [done] Load orders from storage and show key details (0.40 days)
+- [x] [done] Add basic order detail view (0.10 days)
+
+### US-08 Restaurant updates order status
+- [x] [done] Add status field to order model (0.25 days)
+- [x] [done] Add UI control to update status in restaurant view (0.50 days)
+- [x] [done] Persist updated status and verify in orders list (0.25 days)

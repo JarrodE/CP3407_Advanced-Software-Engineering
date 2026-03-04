@@ -94,6 +94,8 @@ checkoutForm.addEventListener("submit", (e) => {
     id: generateOrderId(),
     placedAt: new Date().toISOString(),
     customer: { name: name.trim(), address: address.trim(), phone: phone.trim() },
+    restaurantId: cart[0]?.rid || null,
+    restaurantName: cart[0]?.restaurantName || null,
     items: cart,
     total: cart.reduce((sum, i) => sum + i.price * i.qty, 0),
     status: "pending",

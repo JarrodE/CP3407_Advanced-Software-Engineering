@@ -7,10 +7,6 @@ Status labels used:
 
 ## Todo
 
-### US-04 Update cart quantities
-- [ ] [todo] Add quantity controls (+ / -) in cart view (0.40 days)
-- [ ] [todo] Add remove item action (0.20 days)
-- [ ] [todo] Recalculate totals and validate cart updates (0.40 days)
 
 ### US-05 Place an order
 - [ ] [todo] Create checkout form for delivery details (0.50 days)
@@ -53,3 +49,8 @@ Status labels used:
 - [x] [done] Implement cart storage in localStorage (0.25 days)
 - [x] [done] Create cart page showing items + total (0.40 days)
 - [x] [done] Add clear cart button + basic UX messages (0.10 days)
+
+### US-04 Update cart quantities
+- [x] [done] Add quantity controls (+ / -) in cart view (0.40 days)
+- [x] [done] Add remove item action (0.20 days)
+- [x] [done] Recalculate totals and validate cart updates (0.40 days)

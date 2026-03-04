@@ -16,12 +16,15 @@ Planning poker / estimates:
 Description-v1: The customer can change quantities or remove items so the cart matches what they want.
 
 ## Tasks (see chapter 4)
-- [ ] [todo] Add quantity controls (+ / -) in cart view (0.40 days)
-- [ ] [todo] Add remove item action (0.20 days)
-- [ ] [todo] Recalculate totals and validate cart updates (0.40 days)
+- [x] [done] Add quantity controls (+ / -) in cart view (0.40 days)
+- [x] [done] Add remove item action (0.20 days)
+- [x] [done] Recalculate totals and validate cart updates (0.40 days)
 
 # UI Design
 - Add a screenshot/mockup here (later).
 
 # Completed
-- Add screenshot(s) of quantity changes working here (later).
+## Completed-v1 (Iteration 1)
+- Date: 2026-03-04
+- Evidence:
+  - `prototype/js/cart.js` — `updateQty()` (+ / −, removes at 0), `removeItem()`, totals recalculated in `renderCart()` on every change

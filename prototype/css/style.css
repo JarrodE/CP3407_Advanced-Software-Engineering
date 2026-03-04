@@ -31,3 +31,5 @@ body { margin: 0; background: #0f1115; color: #e8e8e8; }
   cursor: pointer;
 }
 .btn:hover { filter: brightness(1.1); }
+.btn-danger { border-color: #6b2a2a; background: #2a1515; color: #e88; }
+.btn-danger:hover { filter: brightness(1.2); }

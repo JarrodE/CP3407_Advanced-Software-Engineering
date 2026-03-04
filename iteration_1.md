@@ -25,13 +25,12 @@ User stories or tasks:
 8. [Restaurant updates order status](./user_stories/user_story_08_update_order_status.md), priority 20, 1 day
 
 In progress:
-* US-03 T1 Add-to-cart button (J), 2026-02-22
-
+(none)
 
 Completed:
-* US-01 Browse restaurants (J),
-* US-02 View restaurant menu (J),
-* US-03 T1 Add-to-cart button (J), 2026-02-22
+* US-01 Browse restaurants (J)
+* US-02 View restaurant menu (J)
+* US-03 Add items to cart (J), 2026-03-04
 
 ### Burn Down for iteration-1 (update at least once per week)
 * 4 weeks left, 10 days of estimated amount of work

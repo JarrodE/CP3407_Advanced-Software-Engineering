@@ -6,11 +6,6 @@ Status labels used:
 - **done**
 
 ## Todo
-### US-03 Add items to cart
-- [ ] [todo] Add “Add to cart” button on menu items (0.25 days)
-- [ ] [todo] Implement cart storage in localStorage (0.25 days)
-- [ ] [todo] Create cart page showing items + total (0.40 days)
-- [ ] [todo] Add clear cart button + basic UX messages (0.10 days)
 
 ### US-04 Update cart quantities
 - [ ] [todo] Add quantity controls (+ / -) in cart view (0.40 days)
@@ -52,3 +47,9 @@ Status labels used:
 - [x] [done] Create menu page/screen for a selected restaurant (0.50 days)
 - [x] [done] Load menu items for the selected restaurant (0.25 days)
 - [x] [done] Add navigation from restaurant list → menu (0.25 days)
+
+### US-03 Add items to cart
+- [x] [done] Add "Add to cart" button on menu items (0.25 days)
+- [x] [done] Implement cart storage in localStorage (0.25 days)
+- [x] [done] Create cart page showing items + total (0.40 days)
+- [x] [done] Add clear cart button + basic UX messages (0.10 days)

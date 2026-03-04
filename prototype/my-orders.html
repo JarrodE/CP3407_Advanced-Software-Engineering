@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FeedMe Prototype - My Orders</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>FeedMe</h1>
+    <p class="sub">My Orders — Track order status (US-09)</p>
+  </header>
+
+  <main class="container">
+    <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-bottom:16px;">
+      <a href="./index.html">← Browse restaurants</a>
+      <span style="color:#555;">|</span>
+      <button class="btn" id="refreshBtn">Refresh</button>
+    </div>
+
+    <div id="status" class="status">Loading your orders...</div>
+    <div id="ordersList"></div>
+  </main>
+
+  <footer class="footer">
+    <small>CP3407 - Iteration 2</small>
+  </footer>
+
+  <script src="./js/my-orders.js"></script>
+</body>
+</html>

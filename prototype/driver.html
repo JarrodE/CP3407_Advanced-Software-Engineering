@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FeedMe Prototype - Driver Portal</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>FeedMe</h1>
+    <p class="sub">Driver Portal — Accept deliveries (US-10)</p>
+  </header>
+
+  <main class="container">
+    <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-bottom:16px;">
+      <a href="./index.html">← Customer view</a>
+      <span style="color:#555;">|</span>
+      <a href="./restaurant-orders.html">Restaurant portal</a>
+    </div>
+
+    <!-- Driver name (mocked) -->
+    <div class="form-group" style="max-width:320px; margin-bottom:20px;">
+      <label for="driverName">Your name (driver)</label>
+      <input id="driverName" type="text" placeholder="e.g. Alex" value="Alex" />
+    </div>
+
+    <h2>Available deliveries</h2>
+    <div id="status" class="status">Loading available deliveries...</div>
+    <div id="availableList"></div>
+
+    <h2 style="margin-top:28px;">My accepted jobs</h2>
+    <div id="acceptedStatus" class="status" style="display:none;"></div>
+    <div id="acceptedList"></div>
+  </main>
+
+  <footer class="footer">
+    <small>CP3407 - Iteration 2</small>
+  </footer>
+
+  <script src="./js/driver.js"></script>
+</body>
+</html>

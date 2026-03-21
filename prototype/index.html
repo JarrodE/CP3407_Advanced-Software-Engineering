@@ -3,40 +3,44 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FeedMe Prototype - Restaurants</title>
+  <title>FeedMe — Order Food Delivery</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Firebase SDK (cloud database for HD criterion) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="./js/lib/firebase-config.js"></script>
 </head>
 <body>
   <header class="header">
-    <h1>FeedMe</h1>
-    <p class="sub">Prototype: Browse restaurants (US-01)</p>
+    <h1>Feed<span class="brand-accent">Me</span></h1>
+    <p class="sub">Delicious food, delivered fast</p>
   </header>
 
   <main class="container">
-    <div style="margin-bottom:14px; display:flex; gap:16px; flex-wrap:wrap;">
-      <a href="./cart.html" class="btn">Cart</a>
-      <a href="./my-orders.html" class="btn">My Orders</a>
-      <a href="./restaurant-orders.html" class="btn">Restaurant Portal →</a>
-      <a href="./manage-menu.html" class="btn">Manage Menu →</a>
-      <a href="./driver.html" class="btn">Driver Portal →</a>
-    </div>
-
+    <nav class="nav-bar">
+      <a href="./index.html" class="active">🏠 Home</a>
+      <a href="./cart.html">🛒 Cart</a>
+      <a href="./my-orders.html">📦 My Orders</a>
+      <a href="./restaurant-orders.html">📋 Restaurant Portal</a>
+      <a href="./manage-menu.html">✏️ Manage Menu</a>
+      <a href="./driver.html">🚗 Driver Portal</a>
+    </nav>
     <section class="controls">
-      <input id="search" type="text" placeholder="Search restaurants..." />
+      <input id="search" type="text" placeholder="🔍 Search restaurants..." />
       <select id="category">
         <option value="">All categories</option>
       </select>
     </section>
 
     <section>
-      <h2>Restaurants</h2>
+      <h2>Restaurants near you</h2>
       <div id="status" class="status">Loading...</div>
       <div id="list" class="grid"></div>
     </section>
   </main>
 
   <footer class="footer">
-    <small>CP3407 - Iteration 1</small>
+    FeedMe &copy; 2026 — CP3407 Advanced Software Engineering
   </footer>
 
   <script src="./js/app.js"></script>

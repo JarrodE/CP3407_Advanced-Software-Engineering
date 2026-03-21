@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FeedMe Prototype - Restaurant Orders</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Firebase SDK (cloud database for HD criterion) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="./js/lib/firebase-config.js"></script>
 </head>
 <body>
   <header class="header">
-    <h1>FeedMe</h1>
-    <p class="sub">Restaurant Portal: Incoming Orders (US-07 / US-08)</p>
+    <h1>Feed<span class="brand-accent">Me</span></h1>
+    <p class="sub">Manage incoming orders</p>
   </header>
 
   <main class="container">
-    <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-bottom:16px;">
-      <a href="./manage-menu.html">Manage Menu →</a>
-      <span style="color:#555;">|</span>
-      <a href="./index.html">Customer view</a>
-    </div>
-
+    <nav class="nav-bar">
+      <a href="./index.html">🏠 Home</a>
+      <a href="./cart.html">🛒 Cart</a>
+      <a href="./my-orders.html">📦 My Orders</a>
+      <a href="./restaurant-orders.html" class="active">📋 Restaurant Portal</a>
+      <a href="./manage-menu.html">✏️ Manage Menu</a>
+      <a href="./driver.html">🚗 Driver Portal</a>
+    </nav>
     <!-- Restaurant selector -->
     <div class="form-group" style="max-width:320px;">
       <label for="restaurantSelect">Viewing orders for</label>
@@ -32,7 +38,7 @@
   </main>
 
   <footer class="footer">
-    <small>CP3407 - Iteration 1</small>
+    FeedMe &copy; 2026 — CP3407 Advanced Software Engineering
   </footer>
 
   <script src="./js/restaurant-orders.js"></script>

@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FeedMe Prototype - Manage Menu</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Firebase SDK (cloud database for HD criterion) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="./js/lib/firebase-config.js"></script>
 </head>
 <body>
   <header class="header">
-    <h1>FeedMe</h1>
-    <p class="sub">Restaurant Portal: Manage Menu (US-06)</p>
+    <h1>Feed<span class="brand-accent">Me</span></h1>
+    <p class="sub">Restaurant menu management</p>
   </header>
 
   <main class="container">
-    <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-bottom:16px;">
-      <a href="./restaurant-orders.html">View Orders →</a>
-      <span style="color:#555;">|</span>
-      <a href="./index.html">Customer view</a>
-    </div>
-
+    <nav class="nav-bar">
+      <a href="./index.html">🏠 Home</a>
+      <a href="./cart.html">🛒 Cart</a>
+      <a href="./my-orders.html">📦 My Orders</a>
+      <a href="./restaurant-orders.html">📋 Restaurant Portal</a>
+      <a href="./manage-menu.html" class="active">✏️ Manage Menu</a>
+      <a href="./driver.html">🚗 Driver Portal</a>
+    </nav>
     <!-- Restaurant selector -->
     <div class="form-group" style="max-width:320px;">
       <label for="restaurantSelect">Managing restaurant</label>
@@ -48,8 +54,7 @@
           <div class="form-group" style="flex-direction:row; align-items:center; gap:10px;">
             <input id="newAvail" type="checkbox" checked style="width:18px;height:18px;" />
             <label for="newAvail" style="color:#e8e8e8; font-size:1rem;">Available</label>
-          </div>
-          <button class="btn btn-primary" type="submit">Add item</button>
+          </div>          <button class="btn btn-primary" type="submit">Add item</button>
         </form>
       </div>
     </section>
@@ -78,15 +83,14 @@
           <label for="editAvail" style="color:#e8e8e8; font-size:1rem;">Available</label>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn btn-primary" type="submit">Save</button>
-          <button class="btn" type="button" id="cancelEdit">Cancel</button>
+          <button class="btn btn-primary" type="submit">Save</button>          <button class="btn" type="button" id="cancelEdit">Cancel</button>
         </div>
       </form>
     </div>
   </div>
 
   <footer class="footer">
-    <small>CP3407 - Iteration 1</small>
+    FeedMe &copy; 2026 — CP3407 Advanced Software Engineering
   </footer>
 
   <script src="./js/manage-menu.js"></script>

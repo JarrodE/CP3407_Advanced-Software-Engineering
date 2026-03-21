@@ -5,19 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FeedMe - Driver Portal</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Firebase SDK (cloud database for HD criterion) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="./js/lib/firebase-config.js"></script>
 </head>
 <body>
   <header class="header">
-    <h1>FeedMe — Driver</h1>
-    <p class="sub">Accept & manage deliveries (US-10)</p>
+    <h1>Feed<span class="brand-accent">Me</span></h1>
+    <p class="sub">Accept & deliver orders</p>
   </header>
 
   <main class="container">
-    <a href="./index.html">← Back to home</a>
+    <nav class="nav-bar">
+      <a href="./index.html">🏠 Home</a>
+      <a href="./cart.html">🛒 Cart</a>
+      <a href="./my-orders.html">📦 My Orders</a>
+      <a href="./restaurant-orders.html">📋 Restaurant Portal</a>
+      <a href="./manage-menu.html">✏️ Manage Menu</a>
+      <a href="./driver.html" class="active">🚗 Driver Portal</a>
+    </nav>
 
     <h2 style="margin-top:14px;">Available Deliveries</h2>
     <p id="status" class="status">Loading deliveries...</p>
-
     <div id="deliveriesList" style="margin-top:16px;"></div>
 
     <h2 style="margin-top:28px;">My Accepted Jobs</h2>
@@ -26,7 +36,7 @@
   </main>
 
   <footer class="footer">
-    <small>CP3407 - Iteration 2</small>
+    FeedMe &copy; 2026 — CP3407 Advanced Software Engineering
   </footer>
 
   <script src="./js/driver.js"></script>

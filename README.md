@@ -9,10 +9,14 @@ FeedMe is a food ordering and delivery system — a "better FoodPanda" app. Cust
 ## How we work
 We deliver in short iterations following Agile/Scrum principles (Ch 1–5). Each iteration ends with working, runnable software and a retrospective.
 
+## Live Demo
+
+**[https://jarrode.github.io/CP3407_Advanced-Software-Engineering/prototype/](https://jarrode.github.io/CP3407_Advanced-Software-Engineering/prototype/index.html)**
+
 ## Quick Start
 
 ```bash
-# Open the app (use VS Code Live Server or any static server)
+# Or run locally (use VS Code Live Server or any static server)
 # Navigate to prototype/index.html
 
 # Run tests
@@ -24,14 +28,14 @@ npm run test:coverage
 ```
 
 ## Documentation
-- [Initial Backlog Ideas](docs/initial-backlog.md)
-- [User Stories (table)](User_stories.md)
+- [Initial Backlog Ideas](docs/initial-backlog.md)- [User Stories (table)](User_stories.md)
 - [Iteration 1 Board](iteration_1.md)
 - [Iteration 2 Board](iteration_2.md)
 - [Iteration 1 Task Board](docs/iteration_1_tasks.md)
 - [Testing Strategy & Coverage](docs/testing.md)
 - [Design & Architecture](docs/design.md)
 - [Build Tools & Project Structure](docs/build-tools.md)
+- [Cloud Services (Firebase)](docs/cloud-services.md)
 
 ## User Stories
 
@@ -53,8 +57,7 @@ npm run test:coverage
 | Page | File | User Stories |
 |------|------|-------------|
 | Home (Browse) | `prototype/index.html` | US-01, US-02 |
-| Menu | `prototype/menu.html` | US-03 |
-| Cart | `prototype/cart.html` | US-03, US-04 |
+| Menu | `prototype/menu.html` | US-03 || Cart | `prototype/cart.html` | US-03, US-04 |
 | Checkout | `prototype/checkout.html` | US-05 |
 | My Orders | `prototype/my-orders.html` | US-09 |
 | Manage Menu | `prototype/manage-menu.html` | US-06 |

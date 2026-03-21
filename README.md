@@ -16,7 +16,7 @@ We deliver in short iterations following Agile/Scrum principles (Ch 1–5). Each
 ## Quick Start
 
 ```bash
-# Or run locally (use VS Code Live Server or any static server)
+# Run locally — use VS Code Live Server or any static server
 # Navigate to prototype/index.html
 
 # Run tests
@@ -27,15 +27,29 @@ npm test
 npm run test:coverage
 ```
 
-## Documentation
-- [Initial Backlog Ideas](docs/initial-backlog.md)- [User Stories (table)](User_stories.md)
+## 📋 Project Documentation (Rubric Criteria)
+
+> **[Documentation Hub](docs/index.md)** — Start here. Links to all project pages.
+
+| # | Criterion | Page |
+|---|-----------|------|
+| 1 | Requirements | [User Stories & Requirements](docs/requirements.md) |
+| 2 | Design | [Architecture & Design](docs/design.md) |
+| 3 | Implementation/Code | [Implementation & Delivered Solution](docs/implementation.md) |
+| 4 | Test | [Testing Strategy & Coverage](docs/testing.md) |
+| 5 | Version Control | [Git & GitHub Usage](docs/version-control.md) |
+| 6 | Building & Dev Tools | [Build Tools & Libraries](docs/build-tools.md) |
+| 7 | Agile Process | [Agile Iterative Development](docs/agile.md) |
+| 8 | Technical Writing | [Documentation Hub](docs/index.md) |
+
+## Additional Documentation
+
+- [AI Declaration & Prompts Used](docs/ai-declaration.md)
+- [Cloud Services (Firebase)](docs/cloud-services.md)
+- [Initial Backlog Ideas](docs/initial-backlog.md)
 - [Iteration 1 Board](iteration_1.md)
 - [Iteration 2 Board](iteration_2.md)
 - [Iteration 1 Task Board](docs/iteration_1_tasks.md)
-- [Testing Strategy & Coverage](docs/testing.md)
-- [Design & Architecture](docs/design.md)
-- [Build Tools & Project Structure](docs/build-tools.md)
-- [Cloud Services (Firebase)](docs/cloud-services.md)
 
 ## User Stories
 
@@ -57,7 +71,8 @@ npm run test:coverage
 | Page | File | User Stories |
 |------|------|-------------|
 | Home (Browse) | `prototype/index.html` | US-01, US-02 |
-| Menu | `prototype/menu.html` | US-03 || Cart | `prototype/cart.html` | US-03, US-04 |
+| Menu | `prototype/menu.html` | US-03 |
+| Cart | `prototype/cart.html` | US-03, US-04 |
 | Checkout | `prototype/checkout.html` | US-05 |
 | My Orders | `prototype/my-orders.html` | US-09 |
 | Manage Menu | `prototype/manage-menu.html` | US-06 |
@@ -86,3 +101,7 @@ tests/               ← Jest unit + acceptance tests
 ```
 
 See [docs/design.md](docs/design.md) for full architecture documentation.
+
+## AI Attribution
+
+This project used Claude (Anthropic) as a generative AI assistant. See [AI Declaration & Prompts Used](docs/ai-declaration.md) for full details.

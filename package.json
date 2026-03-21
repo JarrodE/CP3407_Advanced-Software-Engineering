@@ -1,0 +1,19 @@
+{
+  "name": "feedme-app",
+  "version": "1.0.0",
+  "description": "FeedMe – a better food delivery app (CP3407 project)",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint prototype/js/**/*.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/tests"]
+  },
+  "keywords": ["food-delivery", "jcu", "cp3407"],
+  "license": "MIT"
+}

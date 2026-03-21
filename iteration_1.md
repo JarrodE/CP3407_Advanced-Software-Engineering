@@ -44,3 +44,22 @@ Completed:
 * 0 weeks left, 0 days
 * Actual Velocity: 10 days / 3 weeks ≈ 0.71 (all 8 stories complete)
 
+### Iteration-1 Retrospective
+
+**What went well:**
+- All 8 user stories completed on schedule
+- Consistent dark-theme UI with card-based design across all pages
+- localStorage provides a working database stub for the prototype
+- GitHub workflow with feature branches and PR templates established
+
+**What could improve:**
+- Business logic is tightly coupled to the DOM (hard to test)
+- No automated tests yet (addressed in iteration-2)
+- Need to add build tools and documentation
+
+**Action items for iteration-2:**
+- Extract business logic into testable modules
+- Set up Jest testing framework
+- Implement US-09 and US-10
+- Write architecture and testing documentation
+

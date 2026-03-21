@@ -1,141 +1,205 @@
-# Design & Architecture — FeedMe App
+# 2. Design — Architecture, Database & Interface
 
-## System Architecture
+## Architectural Design
 
-FeedMe is a client-side web application for food delivery ordering. The architecture follows a
-**layered separation** between UI rendering and business logic.
+FeedMe uses a **layered client-side architecture** with a clear separation between UI rendering, business logic, and data persistence. This follows the **Humble Object** pattern (textbook Ch 5) to keep business logic pure and testable.
 
-```
-┌─────────────────────────────────────────────────┐
-│                  Browser (Client)                │
-├──────────────┬──────────────────────────────────┤
-│   UI Layer   │      Business Logic Layer        │
-│              │                                   │
-│  app.js      │  lib/filter-logic.js             │
-│  menu.js     │  lib/cart-logic.js               │
-│  cart.js     │  lib/cart-logic.js               │
-│  checkout.js │  lib/checkout-logic.js           │
-│  manage-     │  lib/menu-logic.js               │
-│  menu.js     │                                   │
-│  restaurant- │  lib/order-logic.js              │
-│  orders.js   │                                   │
-├──────────────┴──────────────────────────────────┤
-│              Data / Persistence                  │
-│                                                  │
-│  localStorage          JSON seed files           │
-│  (cart, orders,        (restaurants.json,         │
-│   custom menus)         menus.json)              │
-└─────────────────────────────────────────────────┘
+*Diagram created with [Mermaid Live Editor](https://mermaid.live) — an online UML diagram tool.*
+
+```mermaid
+graph TB
+    subgraph Browser["Browser Client"]
+        subgraph UI["UI Layer - DOM Rendering"]
+            app["app.js<br/>Home Page"]
+            menujs["menu.js<br/>Menu Page"]
+            cartjs["cart.js<br/>Cart Page"]
+            checkoutjs["checkout.js<br/>Checkout"]
+            myorders["my-orders.js<br/>Order Tracking"]
+            managemenu["manage-menu.js<br/>Menu CRUD"]
+            restorders["restaurant-orders.js<br/>Order Portal"]
+            driverjs["driver.js<br/>Driver Portal"]
+        end
+        subgraph Logic["Business Logic Layer - Pure JS, Testable"]
+            filter["filter-logic.js"]
+            cartlogic["cart-logic.js"]
+            checkoutlogic["checkout-logic.js"]
+            menulogic["menu-logic.js"]
+            orderlogic["order-logic.js"]
+        end
+        subgraph Data["Data Layer"]
+            storage["StorageBackend<br/>Abstraction"]
+        end
+    end
+    subgraph Cloud["Google Cloud"]
+        firebase[("Firebase<br/>Realtime DB")]
+    end
+    subgraph Fallback["Offline Fallback"]
+        local[("localStorage")]
+    end
+    app --> filter
+    menujs --> cartlogic
+    cartjs --> cartlogic
+    checkoutjs --> checkoutlogic
+    managemenu --> menulogic
+    restorders --> orderlogic
+    filter --> storage
+    cartlogic --> storage
+    checkoutlogic --> storage
+    menulogic --> storage
+    orderlogic --> storage
+    storage --> firebase
+    storage -.->|offline| local
 ```
 
-## Data Flow
+### Layer Descriptions
 
-### Customer Ordering Flow
-```
-index.html          menu.html           cart.html           checkout.html
-┌──────────┐       ┌──────────┐       ┌──────────┐       ┌──────────────┐
-│ Browse &  │──────>│ View menu│──────>│ Review   │──────>│ Enter details│
-│ filter    │       │ + add to │       │ cart,    │       │ validate,    │
-│ restaurants│      │ cart     │       │ adjust   │       │ place order  │
-└──────────┘       └──────────┘       │ qty      │       └──────┬───────┘
-                                       └──────────┘              │
-                                                                 v
-                                                        ┌──────────────┐
-                                                        │ Confirmation │
-                                                        │ (order ID,   │
-                                                        │  summary)    │
-                                                        └──────────────┘
-```
+| Layer | Responsibility | Testable? |
+|-------|---------------|-----------|
+| **UI Layer** | DOM manipulation, event handling, page rendering | No (DOM-coupled) |
+| **Business Logic** | Cart operations, validation, filtering, order management | Yes — 100% coverage via Jest |
+| **Data Layer** | StorageBackend abstraction over Firebase + localStorage | Swappable backends |
+| **Cloud** | Firebase Realtime Database (Google Cloud, Asia SE region) | Real-time sync |
+| **Fallback** | localStorage when Firebase unavailable | Offline-capable |
 
-### Restaurant Management Flow
-```
-manage-menu.html                    restaurant-orders.html
-┌────────────────┐                 ┌──────────────────────┐
-│ Select          │                │ Select restaurant    │
-│ restaurant     │                 │                      │
-│       │        │                 │       │              │
-│       v        │                 │       v              │
-│ Add / Edit /   │                 │ View orders          │
-│ Delete items   │                 │ (newest first)       │
-│                │                 │       │              │
-│ Persisted to   │                 │       v              │
-│ localStorage   │                 │ Update status:       │
-└────────────────┘                 │ pending → accepted → │
-                                   │ preparing → ready →  │
-                                   │ completed            │
-                                   └──────────────────────┘
-```
+### Design Justification
+
+The Humble Object pattern was chosen because:
+1. **Testability** — Business logic is pure JavaScript with no DOM or browser dependencies, enabling 100% unit test coverage
+2. **Swappable persistence** — The StorageBackend abstraction allowed adding Firebase in iteration 2 without changing any business logic
+3. **Simplicity** — No framework overhead; the app deploys as static files to GitHub Pages
+
+---
 
 ## Database Design
 
-### Current: localStorage (Prototype)
+*Diagram created with [Mermaid Live Editor](https://mermaid.live) — an online database diagram tool.*
 
-The prototype uses browser localStorage as a lightweight database stub.
-Three storage keys are used:
+```mermaid
+erDiagram
+    RESTAURANT {
+        string id PK
+        string name
+        string category
+        float rating
+        int etaMins
+    }
+    MENU_ITEM {
+        string id PK
+        string restaurantId FK
+        string name
+        float price
+        boolean available
+    }
+    ORDER {
+        string id PK
+        string restaurantId FK
+        datetime placedAt
+        string status
+        float total
+    }
+    CUSTOMER {
+        string name
+        string address
+        string phone
+    }
+    CART_ITEM {
+        string id PK
+        string restaurantId FK
+        string name
+        float price
+        int qty
+    }
+    RESTAURANT ||--o{ MENU_ITEM : has
+    RESTAURANT ||--o{ ORDER : receives
+    ORDER }|--|{ CART_ITEM : contains
+    ORDER ||--|| CUSTOMER : placed_by
+```
+
+### Storage Keys (Firebase paths / localStorage keys)
 
 | Key | Structure | Purpose |
 |-----|-----------|---------|
 | `feedme_cart` | `[{ id, name, price, qty, rid, restaurantName }]` | Active shopping cart |
 | `feedme_orders` | `[{ id, placedAt, customer, restaurantId, items, total, status }]` | Order history |
 | `feedme_menus` | `{ [rid]: [{ id, name, price, available }] }` | Custom menu overrides |
+| `feedme_driver_assignments` | `[{ orderId, driverId, assignedAt }]` | Driver delivery history |
 
 ### Seed Data (JSON files)
 
 | File | Structure | Records |
 |------|-----------|---------|
-| `restaurants.json` | `[{ id, name, category, rating, etaMins }]` | Restaurant listings |
-| `menus.json` | `{ [rid]: [{ id, name, price }] }` | Default menus per restaurant |
+| `restaurants.json` | `[{ id, name, category, rating, etaMins }]` | 3 restaurants |
+| `menus.json` | `{ [rid]: [{ id, name, price }] }` | 3 items per restaurant |
 
-### Entity Relationship
+---
 
+## Interface Design
+
+*Prototype built as working HTML/CSS/JS pages — the live prototype IS the interface design. Screenshots taken from the deployed [GitHub Pages site](https://jarrode.github.io/CP3407_Advanced-Software-Engineering/prototype/).*
+
+### Page Map & User Flows
+
+```mermaid
+graph LR
+    subgraph Customer["Customer Flow"]
+        home["Home<br/>Browse & Filter"] --> menu["Menu<br/>View Items"]
+        menu --> cart["Cart<br/>Review & Edit"]
+        cart --> checkout["Checkout<br/>Place Order"]
+        checkout --> myorders["My Orders<br/>Track Status"]
+    end
+    subgraph Restaurant["Restaurant Flow"]
+        restorders["Restaurant Orders<br/>View & Update Status"]
+        managemenu["Manage Menu<br/>Add/Edit/Delete Items"]
+    end
+    subgraph Driver["Driver Flow"]
+        driver["Driver Portal<br/>Accept Deliveries"]
+    end
 ```
-Restaurant (1) ──────< Menu Item (many)
-     │
-     │
-     └────< Order (many)
-                │
-                ├── Customer { name, address, phone }
-                ├── Items [{ id, name, price, qty }]
-                ├── Status (pending|accepted|preparing|ready|completed)
-                └── Total (calculated)
-```
 
-## UI Design
+### All Pages
 
-### Design Principles
-- **Dark theme** with card-based layout for readability
+| Page | File | User Stories | Role |
+|------|------|-------------|------|
+| Home (Browse) | `index.html` | US-01, US-02 | Customer |
+| Menu | `menu.html` | US-02, US-03 | Customer |
+| Cart | `cart.html` | US-03, US-04 | Customer |
+| Checkout | `checkout.html` | US-05 | Customer |
+| My Orders | `my-orders.html` | US-09 | Customer |
+| Manage Menu | `manage-menu.html` | US-06 | Restaurant |
+| Restaurant Orders | `restaurant-orders.html` | US-07, US-08 | Restaurant |
+| Driver Portal | `driver.html` | US-10 | Driver |
+
+### UI Design Principles
+- **Dark theme** with CSS custom properties (`--accent: #ff6b35`) for consistent theming
+- **Card-based layout** with hover animations (`@keyframes fadeIn`) for restaurant and menu items
+- **Pill-shaped navigation** bar for role switching (Customer / Restaurant / Driver)
 - **Badge system** for metadata (price, rating, ETA, status)
-- **Responsive** flex/grid layout adapting to screen sizes
-- **Feedback patterns**: "Added!" confirmation, disabled states during async
 - **Colour-coded statuses**: pending (amber), accepted (blue), preparing (purple), ready (green), completed (grey)
+- **Responsive design** with CSS Grid/Flexbox and mobile breakpoints
+- **Toast notifications** for user feedback (e.g., "Added to cart!")
 
-### Page Structure
+### Order Status Flow
 
-| Page | File | Purpose | User Stories |
-|------|------|---------|-------------|
-| Home | `index.html` | Browse & filter restaurants | US-01, US-02 |
-| Menu | `menu.html` | View restaurant menu, add to cart | US-03 |
-| Cart | `cart.html` | Review cart, adjust quantities | US-03, US-04 |
-| Checkout | `checkout.html` | Enter details, place order | US-05 |
-| Manage Menu | `manage-menu.html` | Restaurant menu CRUD | US-06 |
-| Orders Portal | `restaurant-orders.html` | View & manage incoming orders | US-07, US-08 |
+```mermaid
+stateDiagram-v2
+    [*] --> Pending: Order placed
+    Pending --> Accepted: Restaurant accepts
+    Accepted --> Preparing: Kitchen starts
+    Preparing --> Ready: Food ready
+    Ready --> Completed: Delivered
+```
 
-### Shared Styles
-
-All pages share `css/style.css` which provides:
-- CSS custom properties for theming (`--bg`, `--card-bg`, `--accent`)
-- `.card` component with hover states
-- `.badge` metadata chips
-- `.btn` and `.btn-danger` button styles
-- Form input styling with error state display
+---
 
 ## Technology Choices
 
 | Concern | Choice | Rationale |
 |---------|--------|-----------|
-| Language | Vanilla JavaScript (ES6+) | No framework overhead, direct DOM control |
-| Styling | Custom CSS | Lightweight, no build step needed |
-| Data | localStorage + JSON seeds | Suitable for prototype; easy to swap for real DB |
-| Testing | Jest | Industry-standard, fast, good coverage reporting |
-| Package Mgmt | npm | Standard Node.js tooling |
-| Version Control | Git + GitHub | Required by rubric; branches + PRs |
+| Language | Vanilla JavaScript (ES6+) | No framework overhead, deploys as static files |
+| Styling | Custom CSS with variables | Lightweight, no build step needed |
+| Cloud DB | Firebase Realtime Database | Free tier, real-time sync, client-side SDK |
+| Fallback | localStorage | Offline-capable when Firebase unavailable |
+| Hosting | GitHub Pages | Free, automatic deployment from main branch |
+| Testing | Jest | Industry-standard, fast, good coverage |
+| CI/CD | GitHub Actions | Automated tests on every push |
+| Linting | ESLint | Static analysis for code quality |

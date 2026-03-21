@@ -15,11 +15,16 @@ User stories or tasks:
 1. [Track order status](./user_stories/user_story_09_track_order_status.md), priority 20, 2 days
 2. [Driver accepts a delivery](./user_stories/user_story_10_driver_accept_delivery.md), priority 30, 1 day
 
-Additional tasks completed (testing & documentation):
+Additional tasks completed (testing, tooling & cloud):
 3. Set up Jest testing framework with 95 unit + acceptance tests (100% coverage)
 4. Extracted business logic into testable `lib/` modules
 5. Created testing, design, and build-tools documentation
 6. Added package.json with npm scripts
+7. Integrated Firebase Realtime Database with StorageBackend abstraction
+8. Set up GitHub Actions CI pipeline (Node 22, runs on every push/PR)
+9. Added ESLint static analysis for code quality
+10. UI overhaul: dark theme, CSS custom properties, responsive design
+11. Deployed to GitHub Pages for live demo
 
 In progress:
 (none)
@@ -29,6 +34,11 @@ Completed:
 * US-10 Driver accepts a delivery (J), 2026-03-21
 * Testing framework setup + 95 tests (J), 2026-03-21
 * Architecture documentation (J), 2026-03-21
+* Firebase Realtime Database integration (J), 2026-03-21
+* GitHub Actions CI pipeline (J), 2026-03-21
+* ESLint static analysis setup (J), 2026-03-21
+* UI overhaul — dark theme + responsive CSS (J), 2026-03-21
+* GitHub Pages deployment (J), 2026-03-21
 
 ### Burn Down for iteration-2 (update at least once per week)
 * 2 weeks left, 3 days of estimated amount of work
@@ -43,13 +53,17 @@ Completed:
 - 100% statement and function coverage achieved across all modules
 - Acceptance tests simulate real user journeys end-to-end
 - US-09 and US-10 implemented with consistent UI design
+- Firebase Realtime Database integrated with StorageBackend abstraction — graceful localStorage fallback
+- GitHub Actions CI catches regressions on every push (caught npm ci lock file mismatch early)
+- ESLint enforces strict equality and curly braces across business logic
+- Live demo deployed to GitHub Pages — always up to date with `main` branch
 
 **What could improve:**
-- Could add integration tests that test DOM rendering
-- Database is still localStorage — a real backend would strengthen the implementation
+- Could add integration tests that test DOM rendering (currently only business logic is tested)
 - Driver authentication is mocked (no login system yet)
+- Could add more advanced Firebase features (auth, security rules)
 
-**Action items for next iteration (if applicable):**
-- Consider adding a real database backend (MySQL/Firebase)
-- Add user authentication for customer/driver/restaurant roles
-- Deploy to GitHub Pages for live demo
+**Lessons learned:**
+- `npm ci` requires lock file to be in sync with package.json — regenerate after adding dependencies
+- GitHub Pages caches aggressively — individual pages need hard-refresh after updates
+- DOM element dependencies (e.g., `cartCount` span) must be preserved when overhauling HTML templates

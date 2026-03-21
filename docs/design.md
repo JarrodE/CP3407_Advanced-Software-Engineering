@@ -137,6 +137,21 @@ erDiagram
 
 *Prototype built as working HTML/CSS/JS pages — the live prototype IS the interface design. Screenshots taken from the deployed [GitHub Pages site](https://jarrode.github.io/CP3407_Advanced-Software-Engineering/prototype/).*
 
+### UI Wireframes
+
+*Wireframes created with [Excalidraw](https://excalidraw.com) — an online prototyping and whiteboard tool. Source files stored in `docs/wireframes/`.*
+
+Early-stage wireframes were created to plan the layout and user flow before implementation. These guided the visual structure of each page:
+
+| Wireframe | Key Elements | Implemented Page |
+|-----------|-------------|-----------------|
+| ![Home](wireframes/wireframe-home.png) | Search bar, restaurant cards with ratings/ETA, bottom nav | `index.html` |
+| ![Menu](wireframes/wireframe-menu.png) | Restaurant header, item list with prices, Add to Cart buttons | `menu.html` |
+| ![Cart](wireframes/wireframe-cart.png) | Item list with quantity controls, order summary, checkout button | `cart.html` |
+| ![Checkout](wireframes/wireframe-checkout.png) | Delivery address, payment method, delivery notes, Place Order | `checkout.html` |
+
+The wireframes established the core layout patterns that carried through to the final implementation: card-based restaurant listings, a persistent bottom navigation bar, and a linear customer flow (Home → Menu → Cart → Checkout → My Orders).
+
 ### Page Map & User Flows
 
 ```mermaid

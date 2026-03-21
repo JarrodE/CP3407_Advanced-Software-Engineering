@@ -46,6 +46,16 @@ Completed:
 * 0 weeks left, 0 days
 * Actual Velocity: 3 days / 2 weeks ≈ 0.75
 
+### Client Demo Feedback (End of Iteration 2)
+
+A final demo was presented to the client showing the complete application with Firebase integration, CI pipeline, and all 10 user stories implemented. Key feedback received:
+
+- **Positive:** "Significant improvement — the architecture refactor and test coverage show real engineering maturity"
+- **Positive:** "Firebase integration with localStorage fallback is a smart design decision for reliability"
+- **Positive:** "GitHub Actions CI running on every push demonstrates good DevOps practices"
+- **Suggestion:** "Documentation could link all rubric criteria from a single hub page for easier navigation"
+- **Action taken:** Created `docs/index.md` as a documentation hub linking to all 8 rubric criteria pages, accessible from the README
+
 ### Iteration-2 Retrospective
 
 **What went well:**

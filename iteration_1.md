@@ -44,6 +44,15 @@ Completed:
 * 0 weeks left, 0 days
 * Actual Velocity: 10 days / 3 weeks ≈ 0.71 (all 8 stories complete)
 
+### Client Demo Feedback (End of Iteration 1)
+
+A demo of the iteration-1 prototype was presented to the client (subject coordinator) showing all 8 core pages with localStorage-backed data. Key feedback received:
+
+- **Positive:** "Good coverage of the core user stories — customer, restaurant, and driver roles are all represented"
+- **Suggestion:** "The business logic is embedded in the page scripts — consider extracting it so you can write automated tests"
+- **Suggestion:** "Would be good to see a cloud database instead of just localStorage for the final version"
+- **Action taken:** Both suggestions were addressed in iteration 2 (extracted `lib/` modules, added Firebase, set up Jest with 95 tests)
+
 ### Iteration-1 Retrospective
 
 **What went well:**

@@ -1,0 +1,17 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {"type":"text","x":50,"y":20,"width":300,"height":35,"text":"FeedMe - UI Wireframes","fontSize":28,"fontFamily":1,"textAlign":"left","id":"title","strokeColor":"#1e1e1e","fillStyle":"solid","roughness":0,"seed":1},
+
+    {"type":"text","x":50,"y":70,"width":200,"height":25,"text":"1. HOME PAGE","fontSize":20,"fontFamily":1,"textAlign":"left","id":"h1","strokeColor":"#e03131","fillStyle":"solid","roughness":0,"seed":2},
+    {"type":"rectangle","x":50,"y":100,"width":320,"height":500,"strokeColor":"#1e1e1e","backgroundColor":"#ffffff","fillStyle":"solid","roughness":0,"strokeWidth":2,"id":"phone1","seed":3},
+    {"type":"rectangle","x":60,"y":110,"width":300,"height":50,"strokeColor":"#1971c2","backgroundColor":"#d0ebff","fillStyle":"solid","roughness":0,"id":"nav1","seed":4},
+    {"type":"text","x":70,"y":120,"width":100,"height":30,"text":"FeedMe","fontSize":20,"fontFamily":1,"textAlign":"left","id":"logo1","strokeColor":"#1971c2","fillStyle":"solid","roughness":0,"seed":5},
+    {"type":"text","x":280,"y":125,"width":60,"height":20,"text":"My Orders","fontSize":12,"fontFamily":1,"textAlign":"right","id":"nav1link","strokeColor":"#1971c2","fillStyle":"solid","roughness":0,"seed":6},
+
+    {"type":"rectangle","x":60,"y":170,"width":300,"height":35,"strokeColor":"#868e96","backgroundColor":"#f8f9fa","fillStyle":"solid","roughness":0,"id":"search1","seed":7},
+    {"type":"text","x":75,"y":178,"width":200,"height":20,"text":"Search restaurants...","fontSize":14,"fontFamily":1,"textAlign":"left","id":"searchtext","strokeColor":"#adb5bd","fillStyle":"solid","roughness":0,"seed":8},
+
+    {"type":"text","x":60,"y":220,"width":200,"height":20,"text":"Nearby Restaurants","fontSize":16,"fontFamily":1,"textAlign":"left","id":"section1","strokeColor":"#1e1e1e","fillStyle":"solid","roughness":0,"seed":9},
